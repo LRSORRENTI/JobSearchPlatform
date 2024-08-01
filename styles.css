@@ -34,6 +34,13 @@
 }
 
 
+.swiper-button-prev:hover {
+  opacity: 70%;
+}
+.swiper-button-next:hover {
+  opacity: 70%;
+}
+
 
 /* Adjusting the position and size of the navigation buttons */
 @media (min-width: 500px) {
@@ -43,8 +50,9 @@
   font-weight: 900;
   width: 50px; /* Increase the width of the buttons */
   height: 50px; /* Increase the height of the buttons */
-  background-color: rgba(0, 0, 0, 0.1); /* Optional: Add a background color for better visibility */
+  background-color: rgba(0, 0, 0, 0.04); /* Optional: Add a background color for better visibility */
   border-radius: 50%;
+  
    /* Optional: Make the buttons circular */
 }
 }
@@ -646,7 +654,7 @@ nav {
   font-size: 2rem;
   font-weight: 800;
   -webkit-text-fill-color: transparent;
-  -webkit-text-stroke: 1px var(--text-dark);
+  -webkit-text-stroke: 1px var(--primary-color-dark);
   padding-right: 1rem;
 }
 
