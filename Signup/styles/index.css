@@ -1,0 +1,164 @@
+:root {
+  --mint: #5db198;
+  --primary-color: #d7c0ff;
+  --primary-color-dark: #7b54be;
+}
+
+.roboto-thin {
+  font-family: "Roboto", sans-serif;
+  font-weight: 100;
+  font-style: normal;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+}
+
+html {
+  height: 100%;
+  background: linear-gradient(to right, #ffffff, #ffffff);
+}
+
+body {
+  font-family: "Roboto", sans-serif;
+}
+/*form styles*/
+#main-form {
+  width: 400px;
+  margin: 50px auto;
+  text-align: center;
+  position: relative;
+}
+#main-form fieldset {
+  background: white;
+  border: 0 none;
+  border-radius: 20px;
+  box-shadow: rgba(0, 0, 0, 0.16) 0px 4px 8px;
+  padding: 20px 30px;
+  box-sizing: border-box;
+  width: 80%;
+  margin: 0 10%;
+
+  /*stacking fieldsets above each other*/
+  position: relative;
+}
+/*Hide all except first fieldset*/
+#main-form fieldset:not(:first-of-type) {
+  display: none;
+}
+/*inputs*/
+#main-form input,
+#main-form textarea {
+  padding: 15px;
+  border: 2px solid #ccc;
+  border-radius: 3px;
+  margin-bottom: 10px;
+  width: 100%;
+  box-sizing: border-box;
+  color: #2c3e50;
+  font-size: 13px;
+  font-family: "Roboto";
+}
+
+input {
+  outline: none;
+}
+
+/*buttons*/
+#main-form .action-button {
+  /* width: 100px;
+  background: var(--primary-color-dark);
+  font-weight: bold;
+  color: white;
+  border: 0 none;
+  border-radius: 5px;
+  cursor: pointer;
+  padding: 10px 5px;
+  margin: 10px 5px; */
+  padding: 0.6rem 1.5rem;
+  outline: none;
+  border: none;
+  font-size: 1rem;
+  color: var(--primary-color-dark);
+  background-color: var(--white);
+  border-radius: 5px;
+  transition: 0.3s;
+  cursor: pointer;
+  border: 1px solid var(--primary-color-dark);
+  box-shadow: 1px 1px 2px rgba(106, 56, 194, 0.5);
+  letter-spacing: 1px;
+  font-weight: 600;
+}
+#main-form .action-button:hover,
+#main-form .action-button:focus {
+  opacity: 80%;
+  box-shadow: 0 0 0 2px white, 0 0 0 3px var(--primary-color-dark);
+}
+
+/*headings*/
+.fs-title {
+  font-size: 15px;
+  text-transform: uppercase;
+  color: #2c3e50;
+  margin-bottom: 10px;
+  font-family: "Roboto";
+}
+.fs-subtitle {
+  font-weight: normal;
+  font-size: 13px;
+  color: #666;
+  margin-bottom: 20px;
+  font-family: "Roboto";
+}
+/*progressbar*/
+#progressbar {
+  margin-bottom: 30px;
+  overflow: hidden;
+  /*CSS counters to number the steps*/
+  counter-reset: step;
+  font-family: "Roboto";
+}
+#progressbar li {
+  list-style-type: none;
+  color: rgb(117, 115, 115);
+  text-transform: uppercase;
+  font-size: 9px;
+  width: 33.33%;
+  float: left;
+  position: relative;
+}
+#progressbar li:before {
+  content: counter(step);
+  counter-increment: step;
+  width: 22px;
+  line-height: 20px;
+  display: block;
+  font-size: 10px;
+  color: #333;
+  background: rgb(232, 232, 232);
+  border-radius: 50%;
+  margin: 0 auto 5px auto;
+}
+/*progressbar connectors*/
+#progressbar li:after {
+  content: "";
+  width: 100%;
+  height: 2px;
+  background: white;
+  position: absolute;
+  left: -50%;
+  top: 9px;
+  z-index: -1; /*put it behind the numbers*/
+}
+#progressbar li:first-child:after {
+  /*connector not needed before the first step*/
+  content: none;
+}
+/*marking active/completed steps green*/
+/*The number of the step and the connector before it = green*/
+#progressbar li.active:before,
+#progressbar li.active:after {
+  background: var(--primary-color-dark);
+  color: white;
+}
