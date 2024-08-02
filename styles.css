@@ -147,6 +147,7 @@
   box-shadow: none
 }
 
+
 .logo {
   font-size: 1.5rem;
   font-weight: 700;
@@ -725,6 +726,11 @@ nav {
 .footer__logo {
   margin-bottom: 2rem;
 }
+
+.footer__col p {
+  margin-bottom: 20px;
+}
+
 
 .footer__col p {
   max-width: 400px;
