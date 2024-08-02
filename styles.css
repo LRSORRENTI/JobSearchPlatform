@@ -10,6 +10,23 @@
   --max-width: 1200px;
 }
 
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+html,
+body {
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: "Poppins", sans-serif;
+}
+
+
+/* BEGIN CAROUSEL SWIPER STYLES  */
 .swiper {
   padding-top: 4rem;
   width: 100%;
@@ -68,7 +85,8 @@
 /* Ensure the buttons are above the content */
 .swiper-button-prev,
 .swiper-button-next {
-  z-index: 10; /* Ensure buttons are on top of other content */
+  z-index: 10; 
+  /* Ensure buttons are on top of other content */
 }
 
 /* Optional: Increase the size of the arrows inside the buttons */
@@ -77,7 +95,6 @@
   font-size: 18px; /* Increase arrow size */
 }
 
-
 .fade-in {
   opacity: 0;
   transition: opacity 1.3s ease-in-out;
@@ -85,12 +102,6 @@
 
 .fade-in-visible {
   opacity: 1;
-}
-
-* {
-  padding: 0;
-  margin: 0;
-  box-sizing: border-box;
 }
 
 .section__container {
@@ -170,15 +181,6 @@ a {
 
 ul {
   list-style: none;
-}
-
-html,
-body {
-  scroll-behavior: smooth;
-}
-
-body {
-  font-family: "Poppins", sans-serif;
 }
 
 nav {
